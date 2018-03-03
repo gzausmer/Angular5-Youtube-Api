@@ -1,0 +1,24 @@
+<mat-toolbar>
+
+  <!--// search input-->
+
+  <div>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Search" [(ngModel)]="userInput">
+    </mat-form-field>
+    <button mat-button
+            (click)="getVids(userInput)"
+            [disabled]="!userInput">Find</button>
+  </div>
+
+  <!--// fav section-->
+
+  <div class="md-toolbar-tools">
+    <h2 class="appTitle">Save your favorite videos!</h2>
+    <button mat-raised-button
+               (click)="favoritesClicked()" [disabled]="!isFavoritesExits">My Favorites</button>
+    <button mat-icon-button>
+      <mat-icon>favorite</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>

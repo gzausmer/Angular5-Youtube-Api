@@ -1,0 +1,24 @@
+<mat-list>
+  <h1 *ngIf="isCurrentViewFavorites">Your Favorite Videos:</h1>
+  <mat-list-item *ngFor="let item of videoList">
+    <img [src]="item.snippet.thumbnails.medium.url" (click)="onVidClicked(item)"/>
+    <div layout="column"
+         (click)="onVidClicked(item)"
+         [ngClass]="{'Collapse': isNavOpen}">
+      <div>
+        <h3 class="itemListTitle">{{ item.snippet.title }}</h3>
+      </div>
+      <div>
+        <h4 class="itemListDesc"
+            [ngClass]="{'itemDescWithNav': isNavOpen}"> {{ item.snippet.description }}</h4>
+      </div>
+    </div>
+    <button mat-button (click)="onSaveClicked(item)">
+      <div class="iconContainer">
+        <button mat-icon-button>
+          <mat-icon [ngClass]="{'favoritePressed': item.saveButtonPressed }">favorite</mat-icon>
+        </button>
+      </div>
+    </button>
+  </mat-list-item>
+</mat-list>
