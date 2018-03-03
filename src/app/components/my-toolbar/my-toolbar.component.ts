@@ -4,7 +4,7 @@ import {MyYoutubeServiceService} from "../../services/my-youtube-service.service
 @Component({
   selector: 'app-my-toolbar',
   templateUrl: './my-toolbar.component.html',
-  styleUrls: ['./my-toolbar.component.css']
+  styleUrls: ['./my-toolbar.component.scss']
 })
 export class MyToolbarComponent implements OnInit {
 

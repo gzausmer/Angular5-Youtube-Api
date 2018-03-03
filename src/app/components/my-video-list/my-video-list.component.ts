@@ -3,7 +3,7 @@ import {Component, Input, OnInit} from '@angular/core';
 @Component({
   selector: 'app-my-video-list',
   templateUrl: './my-video-list.component.html',
-  styleUrls: ['./my-video-list.component.css']
+  styleUrls: ['./my-video-list.component.scss']
 })
 export class MyVideoListComponent implements OnInit {
 

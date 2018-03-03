@@ -2,7 +2,7 @@
 
   <!--// search input-->
 
-  <div>
+  <div class="search-section">
     <mat-form-field class="example-full-width">
       <input matInput placeholder="Search" [(ngModel)]="userInput">
     </mat-form-field>
@@ -13,7 +13,7 @@
 
   <!--// fav section-->
 
-  <div class="md-toolbar-tools">
+  <div class="toolbar-tools">
     <h2 class="appTitle">Save your favorite videos!</h2>
     <button mat-raised-button
                (click)="favoritesClicked()" [disabled]="!isFavoritesExits">My Favorites</button>
